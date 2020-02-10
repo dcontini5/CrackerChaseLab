@@ -18,6 +18,13 @@ namespace CrackerChase
         SpriteBatch spriteBatch;
 
 
+        enum Gamestates 
+        {
+            Startscreen,
+            InGame    
+        }
+
+
         // Game World
         // These variables define the world 
 
@@ -41,9 +48,12 @@ namespace CrackerChase
 
         bool playing;
 
+        string currentState;
+
 
         void startPlayingGame()
         {
+            currentState = Gamestates.InGame.ToString();
             foreach (Sprite s in gameSprites)
             {
                 s.Reset();
@@ -85,6 +95,7 @@ namespace CrackerChase
         /// </summary>
         protected override void LoadContent()
         {
+            currentState = Gamestates.Startscreen.ToString();
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -118,6 +129,7 @@ namespace CrackerChase
             // go to the start screen state
 
             startPlayingGame();
+
         }
 
         /// <summary>
