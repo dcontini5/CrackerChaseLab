@@ -1,9 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CrackerChase
 {
@@ -17,6 +13,8 @@ namespace CrackerChase
             int y = rand.Next(0, screenHeight - rectangle.Height);
             SetPosition(x, y);
         }
+
+        //added comments here 
 
         public Target(int inScreenWidth, int inScreenHeight, Texture2D inSpriteTexture, int inDrawWidth, float inResetX, float inResetY) :
             base(inScreenWidth, inScreenHeight, inSpriteTexture, inDrawWidth, inResetX, inResetY)
